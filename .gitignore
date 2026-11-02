@@ -11,3 +11,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+/dist/livebox-next-1.0.0.zip

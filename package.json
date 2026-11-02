@@ -1,6 +1,6 @@
 {
   "name": "livebox-next",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "description": "聚合直播订阅、开播提醒与小窗口观看的 Manifest V3 扩展",

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Livebox · 直播订阅盒子",
   "description": "聚合 B站、虎牙与斗鱼直播间，提供开播提醒、关注导入和小窗口观看。",
-  "version": "1.0.0",
+  "version": "0.1.0.0",
   "minimum_chrome_version": "120",
   "permissions": ["storage", "alarms", "notifications"],
   "host_permissions": [

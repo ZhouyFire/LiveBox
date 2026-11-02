@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Livebox · 直播订阅</title><link rel="stylesheet" href="styles.css"></head>
+<body class="popup">
+  <header class="app-header"><div class="brand"><span class="brand-icon">▣</span><div><h1>Livebox</h1><p>把喜欢的直播，放在一起。</p></div></div><button id="settings" class="icon-button" title="管理订阅与设置" aria-label="管理订阅与设置">⚙</button></header>
+  <main>
+    <div class="toolbar"><div><span class="eyebrow">我的订阅</span><h2><span id="live-count">0</span> <small>个直播间正在开播</small></h2></div><button id="refresh" class="button secondary">↻ 刷新状态</button></div>
+    <div class="filters"><label class="search"><span>⌕</span><input type="search" id="search" placeholder="搜索主播或直播标题" aria-label="搜索主播或直播标题"></label><select id="platform" aria-label="筛选平台"><option value="">全部平台</option><option value="bilibili">哔哩哔哩</option><option value="huya">虎牙</option><option value="douyu">斗鱼</option></select></div>
+    <div class="status-line"><label><input id="live-only" type="checkbox"> 只看正在直播</label><span id="updated">还未刷新</span></div>
+    <p id="message" class="message" role="status" hidden></p>
+    <section id="rooms" class="room-list" aria-label="订阅直播间"></section>
+    <section id="empty" class="empty" hidden><span class="empty-icon">▧</span><h3>你的直播清单，从这里开始</h3><p>添加直播间，或导入 B站关注。<br>第一次刷新只记录状态，之后开播会提醒你。</p><button id="add-first" class="button primary">＋ 管理订阅</button></section>
+  </main>
+  <footer><span><i class="dot"></i> 本地保存 · 无需注册</span><button id="manage" class="text-button">管理订阅 ↗</button></footer>
+  <script type="module" src="popup.js"></script>
+</body></html>

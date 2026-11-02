@@ -1,0 +1,13 @@
+.runtime/
+node_modules/
+__pycache__/
+*.pyc
+
+# Keep local inputs, investigation records and verification tooling out of the public repository.
+/original/
+/*.crx
+/docs/
+/scripts/verify-artifact.py
+.env
+.env.*
+!.env.example

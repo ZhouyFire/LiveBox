@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Livebox · 直播订阅盒子",
+  "description": "聚合 B站、虎牙与斗鱼直播间，提供开播提醒、关注导入和小窗口观看。",
+  "version": "1.0.0",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": [
+    "https://api.live.bilibili.com/*",
+    "https://www.huya.com/*",
+    "https://open.douyucdn.cn/*"
+  ],
+  "background": { "service_worker": "service-worker.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "直播订阅盒子", "default_icon": "icons/icon128.png" },
+  "options_page": "options.html",
+  "icons": { "128": "icons/icon128.png" },
+  "content_scripts": [{
+    "matches": ["https://live.bilibili.com/*", "https://www.huya.com/*", "https://www.douyu.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'" }
+}

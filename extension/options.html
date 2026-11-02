@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Livebox · 管理订阅</title><link rel="stylesheet" href="styles.css"></head>
+<body class="options"><div class="settings-shell">
+  <header class="settings-header"><div class="brand"><span class="brand-icon">▣</span><div><h1>Livebox <small>/ 管理订阅</small></h1><p>你的主播清单，保存在这台浏览器里。</p></div></div><span class="version">MANIFEST V3 · 1.0</span></header>
+  <main><p id="message" class="message" role="status" hidden></p>
+    <section class="panel"><span class="eyebrow">01 / 添加直播间</span><h2>喜欢的直播，一处收藏</h2><p class="hint">支持 B站、虎牙与斗鱼。粘贴完整直播间链接即可，最多保存 100 个。</p>
+      <form id="add-form" class="add-form"><label>直播间网址<input id="room-url" type="url" required placeholder="https://live.bilibili.com/12345"></label><label>自定义备注（可选）<input id="room-nick" maxlength="80" placeholder="主播名称"></label><button class="button primary" type="submit">＋ 添加订阅</button></form>
+      <div class="import-row"><button id="import-following" class="button secondary">导入 B站关注</button><button id="export" class="button secondary">导出订阅 JSON</button><label class="button secondary file-label">从 JSON 导入<input id="import-file" type="file" accept="application/json,.json" hidden></label></div>
+      <p class="hint small">B站导入使用当前浏览器的站点登录态；最多 100 个有房间号的关注。登录、风控或接口变化会显示错误。虎牙与斗鱼使用手动添加。</p>
+    </section>
+    <section class="panel"><div class="section-title"><div><span class="eyebrow">02 / 我的清单</span><h2>订阅的直播间 <small id="subscription-count">0 / 100</small></h2></div><button id="refresh" class="button secondary">↻ 检查状态</button></div><div id="subscriptions"></div></section>
+    <section class="panel"><span class="eyebrow">03 / 偏好设置</span><h2>按你的节奏提醒</h2><form id="settings-form"><label class="switch-row"><span><strong>开播通知与自动检查</strong><span class="hint">仅在已知的“未开播 → 直播中”变化时提醒；首次检查不打扰。</span></span><input type="checkbox" id="notifications"></label><div class="settings-grid"><label>检查间隔（分钟）<input id="interval" type="number" min="1" max="1440" required></label><label>小窗宽度（像素）<input id="width" type="number" min="480" max="1920" required></label><label>小窗高度（像素）<input id="height" type="number" min="320" max="1080" required></label></div><button class="button primary" type="submit">保存设置</button></form></section>
+    <p class="footnote">小窗打开平台原始直播页面，可自行调整尺寸；不是独立视频流或保证置顶的画中画。直播状态接口可能受平台改版、网络和访问策略影响。</p>
+  </main><footer><span><i class="dot"></i> 账号信息留在平台 · 订阅数据保存在本地</span></footer>
+</div><script type="module" src="options.js"></script></body></html>
